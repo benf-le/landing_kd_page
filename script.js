@@ -4,6 +4,7 @@ const navToggle = document.querySelector("[data-nav-toggle]");
 const langSwitch = document.querySelector("[data-lang-switch]");
 const revealItems = document.querySelectorAll(".reveal");
 const faqItems = document.querySelectorAll(".faq-item");
+const footerToggleButtons = document.querySelectorAll("[data-footer-toggle]");
 
 const translations = {
   "Outcome": { vi: "Kết quả", en: "Outcome" },
@@ -160,6 +161,87 @@ const translations = {
   }
 };
 
+Object.assign(translations, {
+  "OUR PRESENCE": { vi: "HIỆN DIỆN CỦA CHÚNG TÔI", en: "OUR PRESENCE" },
+  "Ho Chi Minh City": { vi: "Thành phố Hồ Chí Minh", en: "Ho Chi Minh City" },
+  "Office 1: 294-296 Truong Sa Street, Cau Kieu Ward, Ho Chi Minh City": {
+    vi: "Văn phòng 1: 294-296 đường Trường Sa, phường Cầu Kiệu, Thành phố Hồ Chí Minh",
+    en: "Office 1: 294-296 Truong Sa Street, Cau Kieu Ward, Ho Chi Minh City"
+  },
+  "Office 2: 09 Hoa Cau Street, Cau Kieu Ward, Ho Chi Minh City": {
+    vi: "Văn phòng 2: 09 đường Hoa Cau, phường Cầu Kiệu, Thành phố Hồ Chí Minh",
+    en: "Office 2: 09 Hoa Cau Street, Cau Kieu Ward, Ho Chi Minh City"
+  },
+  "Tel: (+84) 28 3517 1080": { vi: "Điện thoại: (+84) 28 3517 1080", en: "Tel: (+84) 28 3517 1080" },
+  "Ha Noi": { vi: "Hà Nội", en: "Ha Noi" },
+  "VET Building - 98 Hoang Quoc Viet Street, Nghia Do Ward, Hanoi City": {
+    vi: "Tòa nhà VET - 98 đường Hoàng Quốc Việt, phường Nghĩa Đô, Thành phố Hà Nội",
+    en: "VET Building - 98 Hoang Quoc Viet Street, Nghia Do Ward, Hanoi City"
+  },
+  "Da Nang": { vi: "Đà Nẵng", en: "Da Nang" },
+  "Singapore": { vi: "Singapore", en: "Singapore" },
+  "7 Straits View, Marina One East Tower, #05-01, Singapore 018936": {
+    vi: "7 Straits View, Marina One East Tower, #05-01, Singapore 018936",
+    en: "7 Straits View, Marina One East Tower, #05-01, Singapore 018936"
+  },
+  "Kuala Lumpur": { vi: "Kuala Lumpur", en: "Kuala Lumpur" },
+  "Bangkok": { vi: "Bangkok", en: "Bangkok" },
+  "Melbourne": { vi: "Melbourne", en: "Melbourne" },
+  "The Archer": { vi: "The Archer", en: "The Archer" },
+  "Our Works": { vi: "Dự án", en: "Our Works" },
+  "Careers": { vi: "Tuyển dụng", en: "Careers" },
+  "Insights & News": { vi: "Góc nhìn & Tin tức", en: "Insights & News" },
+  "White paper & Reports": { vi: "Sách trắng & Báo cáo", en: "White paper & Reports" },
+  "Partners": { vi: "Đối tác", en: "Partners" },
+  "End-to-End Digital Transformation": { vi: "Chuyển đổi số toàn diện", en: "End-to-End Digital Transformation" },
+  "Architecture & Strategy": { vi: "Kiến trúc & Chiến lược", en: "Architecture & Strategy" },
+  "Integrate & Orchestrate": { vi: "Tích hợp & Điều phối", en: "Integrate & Orchestrate" },
+  "Insights & Analytics": { vi: "Insight & Phân tích dữ liệu", en: "Insights & Analytics" },
+  "Software Development": { vi: "Phát triển phần mềm", en: "Software Development" },
+  "Custom Software Development": { vi: "Phát triển phần mềm tùy chỉnh", en: "Custom Software Development" },
+  "Large-Scale Software Development": { vi: "Phát triển phần mềm quy mô lớn", en: "Large-Scale Software Development" },
+  "MVP Development": { vi: "Phát triển MVP", en: "MVP Development" },
+  "Application Development": { vi: "Phát triển ứng dụng", en: "Application Development" },
+  "Web Development": { vi: "Phát triển web", en: "Web Development" },
+  "Mobile Development": { vi: "Phát triển mobile", en: "Mobile Development" },
+  "Desktop Development": { vi: "Phát triển desktop", en: "Desktop Development" },
+  "Gen AI Development": { vi: "Phát triển Gen AI", en: "Gen AI Development" },
+  "API Development": { vi: "Phát triển API", en: "API Development" },
+  "Database Development": { vi: "Phát triển cơ sở dữ liệu", en: "Database Development" },
+  "UX Design": { vi: "Thiết kế UX", en: "UX Design" },
+  "Integrate & Automate": { vi: "Tích hợp & Tự động hóa", en: "Integrate & Automate" },
+  "Composable Architecture": { vi: "Kiến trúc composable", en: "Composable Architecture" },
+  "Middleware & Integration": { vi: "Middleware & Tích hợp", en: "Middleware & Integration" },
+  "Performance & Security": { vi: "Hiệu năng & Bảo mật", en: "Performance & Security" },
+  "Data Warehousing": { vi: "Kho dữ liệu", en: "Data Warehousing" },
+  "Analytics Enablement": { vi: "Kích hoạt phân tích dữ liệu", en: "Analytics Enablement" },
+  "Martech & Engagement": { vi: "Martech & Tương tác", en: "Martech & Engagement" },
+  "Data Strategy & Governance": { vi: "Chiến lược & Quản trị dữ liệu", en: "Data Strategy & Governance" },
+  "AI, GenAI & ML": { vi: "AI, GenAI & ML", en: "AI, GenAI & ML" },
+  "Operate & Support": { vi: "Vận hành & Hỗ trợ", en: "Operate & Support" },
+  "Data Entry & Processing": { vi: "Nhập liệu & Xử lý dữ liệu", en: "Data Entry & Processing" },
+  "AI & Data Annotation Services": { vi: "Dịch vụ gán nhãn AI & dữ liệu", en: "AI & Data Annotation Services" },
+  "Managed Service": { vi: "Dịch vụ quản trị vận hành", en: "Managed Service" },
+  "Content Moderation": { vi: "Kiểm duyệt nội dung", en: "Content Moderation" },
+  "E-commerce Support": { vi: "Hỗ trợ thương mại điện tử", en: "E-commerce Support" },
+  "Tailored Solutions": { vi: "Giải pháp tùy chỉnh", en: "Tailored Solutions" },
+  "Our Engagement Models": { vi: "Mô hình hợp tác", en: "Our Engagement Models" },
+  "Software Development Outsourcing": { vi: "Gia công phát triển phần mềm", en: "Software Development Outsourcing" },
+  "Dedicated Development Team": { vi: "Đội ngũ phát triển chuyên trách", en: "Dedicated Development Team" },
+  "IT Staff Augmentation": { vi: "Bổ sung nhân sự IT", en: "IT Staff Augmentation" },
+  "Offshore Developer For Hire": { vi: "Thuê lập trình viên offshore", en: "Offshore Developer For Hire" },
+  "Our Methodology": { vi: "Phương pháp luận", en: "Our Methodology" },
+  "Agile Methodology": { vi: "Phương pháp Agile", en: "Agile Methodology" },
+  "Design Thinking Process": { vi: "Quy trình Design Thinking", en: "Design Thinking Process" },
+  "Project Governance": { vi: "Quản trị dự án", en: "Project Governance" },
+  "Copyright © 2025 Kyanon Digital. All rights reserved.": {
+    vi: "Copyright © 2025 Kyanon Digital. Bảo lưu mọi quyền.",
+    en: "Copyright © 2025 Kyanon Digital. All rights reserved."
+  },
+  "Create project brief with AI": { vi: "Tạo project brief bằng AI", en: "Create project brief with AI" },
+  "DMCA PROTECTED": { vi: "DMCA PROTECTED", en: "DMCA PROTECTED" }
+});
+
 const pageMeta = {
   vi: {
     lang: "vi",
@@ -253,5 +335,12 @@ faqItems.forEach((item) => {
     const shouldOpen = item.getAttribute("aria-expanded") !== "true";
     faqItems.forEach((other) => other.setAttribute("aria-expanded", "false"));
     item.setAttribute("aria-expanded", String(shouldOpen));
+  });
+});
+
+footerToggleButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const shouldOpen = button.getAttribute("aria-expanded") !== "true";
+    button.setAttribute("aria-expanded", String(shouldOpen));
   });
 });
