@@ -241,11 +241,27 @@ button {
   border-radius: 50%;
   background: transparent;
   color: #fff;
+  cursor: pointer;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+}
+
+.nav-toggle:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.52);
+}
+
+.nav-toggle:active {
+  transform: scale(0.94);
 }
 
 .site-header.is-scrolled .nav-toggle {
   color: var(--ink);
   border-color: rgba(17, 17, 17, 0.22);
+}
+
+.site-header.is-scrolled .nav-toggle:hover {
+  background: rgba(17, 17, 17, 0.06);
+  border-color: rgba(17, 17, 17, 0.36);
 }
 
 .nav-toggle span {
@@ -254,6 +270,16 @@ button {
   height: 2px;
   margin: 5px auto;
   background: currentColor;
+  transform-origin: center;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.nav-toggle[aria-expanded="true"] span:first-child {
+  transform: translateY(3.5px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:last-child {
+  transform: translateY(-3.5px) rotate(-45deg);
 }
 
 .section-dark {
