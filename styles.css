@@ -1099,7 +1099,7 @@ section:not(.hero):not(.stats-band) {
   margin: 0 0 24px;
   color: #fff;
   font-size: 22px;
-  line-height: 1;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
