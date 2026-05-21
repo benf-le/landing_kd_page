@@ -245,12 +245,12 @@ Object.assign(translations, {
 const pageMeta = {
   vi: {
     lang: "vi",
-    title: "Gói Vibe Code | Từ ý tưởng đến MVP trong 2 tuần",
+    title: "Kyanon Digital - Making Digital Impact That Matters",
     description: "Gói Vibe Code 2.5K trong 2 tuần giúp startup giai đoạn đầu đi từ ý tưởng đến MVP có thể demo, kiểm chứng và gọi vốn."
   },
   en: {
     lang: "en",
-    title: "Vibe Code Package | Idea to MVP in 2 Weeks",
+    title: "Kyanon Digital - Making Digital Impact That Matters",
     description: "The 2.5K Vibe Code package helps early-stage startups go from idea to a demo-ready MVP for validation and fundraising."
   }
 };
