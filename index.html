@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="vi">
   <head>
     <meta charset="UTF-8" />
@@ -33,6 +33,10 @@
         <a href="#scope">Scope</a>
         <a href="#timeline">Timeline</a>
         <a href="#pricing">Pricing</a>
+        <button class="lang-switch" type="button" aria-label="Switch language" aria-pressed="false" data-lang-switch>
+          <span class="is-active" data-lang-option="vi">VI</span>
+          <span data-lang-option="en">EN</span>
+        </button>
         <a class="nav-cta" href="#contact">Đặt lịch</a>
       </nav>
     </header>
@@ -41,6 +45,12 @@
       <section class="hero section-dark">
         <div class="hero-media" aria-hidden="true">
           <img src="assets/vibe-code-hero.png" alt="" />
+        </div>
+        <div class="brand-collage" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-grid">
@@ -84,6 +94,23 @@
             <strong>MVP</strong>
             <span>Launch, test, iterate</span>
           </div>
+        </div>
+      </section>
+
+      <section class="service-strip section-dark" aria-label="Vibe Code service principles">
+        <div class="container service-strip-grid reveal">
+          <article>
+            <span>Strategise & Plan</span>
+            <p>Define MVP goals, core users, roadmap</p>
+          </article>
+          <article>
+            <span>Build & Engage</span>
+            <p>Human-centric product flow, rapid engineering</p>
+          </article>
+          <article>
+            <span>Analyse & Augment</span>
+            <p>Launch, track signal, learn from user behavior</p>
+          </article>
         </div>
       </section>
 
@@ -309,11 +336,14 @@
 
     <footer class="site-footer">
       <div class="container footer-layout">
-        <span>Vibe Code MVP Sprint</span>
-        <span>Idea → MVP → Validation</span>
+        <div class="footer-brand">
+          <span>Vibe Code MVP Sprint</span>
+        </div>
+        <address>433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang</address>
       </div>
     </footer>
 
     <script src="script.js"></script>
   </body>
 </html>
+
