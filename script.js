@@ -5,6 +5,19 @@ const langSwitch = document.querySelector("[data-lang-switch]");
 const revealItems = document.querySelectorAll(".reveal");
 const faqItems = document.querySelectorAll(".faq-item");
 const footerToggleButtons = document.querySelectorAll("[data-footer-toggle]");
+const heroTitlePrefix = document.querySelector("[data-hero-title-prefix]");
+const heroTitleDuration = document.querySelector("[data-hero-title-duration]");
+
+const heroTitle = {
+  vi: {
+    prefix: "Từ ý tưởng đến MVP trong",
+    duration: "2 tuần"
+  },
+  en: {
+    prefix: "Idea to MVP in",
+    duration: "2 weeks"
+  }
+};
 
 const translations = {
   "Outcome": { vi: "Kết quả", en: "Outcome" },
@@ -276,6 +289,11 @@ const setLanguage = (lang) => {
   document.documentElement.lang = pageMeta[lang].lang;
   document.title = pageMeta[lang].title;
   document.querySelector('meta[name="description"]').setAttribute("content", pageMeta[lang].description);
+
+  if (heroTitlePrefix && heroTitleDuration) {
+    heroTitlePrefix.textContent = heroTitle[lang].prefix;
+    heroTitleDuration.textContent = heroTitle[lang].duration;
+  }
 
   textNodes.forEach(({ node, key, leading, trailing }) => {
     if (translations[key]) {

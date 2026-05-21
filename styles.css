@@ -398,6 +398,10 @@ h1 {
   text-transform: uppercase;
 }
 
+.hero-title-break {
+  display: block;
+}
+
 h2 {
   margin-bottom: 22px;
   color: var(--ink);
