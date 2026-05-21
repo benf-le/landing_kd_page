@@ -326,6 +326,20 @@ nav.addEventListener("click", (event) => {
   }
 });
 
+document.addEventListener("click", (event) => {
+  if (!nav.classList.contains("is-open")) {
+    return;
+  }
+
+  const clickedNav = nav.contains(event.target);
+  const clickedToggle = navToggle.contains(event.target);
+
+  if (!clickedNav && !clickedToggle) {
+    nav.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  }
+});
+
 langSwitch.addEventListener("click", () => {
   const nextLang = langSwitch.getAttribute("aria-pressed") === "true" ? "vi" : "en";
   setLanguage(nextLang);
