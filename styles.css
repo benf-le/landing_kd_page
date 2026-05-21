@@ -658,33 +658,31 @@ section:not(.hero):not(.stats-band) {
 }
 
 .compare-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   border: 1px solid var(--line);
   background: #fff;
 }
 
-.table-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.table-row:not(:last-child) {
-  border-bottom: 1px solid var(--line);
-}
-
-.table-row > * {
-  margin: 0;
-  padding: 26px 30px;
-}
-
-.table-row > *:first-child {
+.compare-column:not(:last-child) {
   border-right: 1px solid var(--line);
 }
 
-.table-head {
+.compare-column h3 {
+  margin: 0;
+  padding: 24px 30px;
   color: #fff;
   background: var(--dark);
+  font-size: 16px;
   font-weight: 900;
   text-transform: uppercase;
+}
+
+.compare-column p {
+  margin: 0;
+  padding: 26px 30px;
+  min-height: 112px;
+  border-top: 1px solid var(--line);
 }
 
 .faq-list {
@@ -880,8 +878,7 @@ section:not(.hero):not(.stats-band) {
   .method-grid,
   .timeline,
   .logo-row,
-  .scope-grid,
-  .table-row {
+  .scope-grid {
     grid-template-columns: 1fr;
   }
 
@@ -890,8 +887,20 @@ section:not(.hero):not(.stats-band) {
   .logo-row span:not(:last-child),
   .method-item:not(:last-child),
   .timeline article:not(:last-child),
-  .table-row > *:first-child {
+  .compare-column:not(:last-child) {
     border-right: 0;
+  }
+
+  .compare-table {
+    grid-template-columns: 1fr;
+  }
+
+  .compare-column:not(:last-child) {
+    border-bottom: 18px solid var(--mist);
+  }
+
+  .compare-column p {
+    min-height: 0;
   }
 
   .stat-item:not(:last-child)::after,
