@@ -26,7 +26,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: "Inter", Arial, sans-serif;
+  font-family: "Montserrat", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
@@ -65,12 +65,14 @@ button {
   background: transparent;
   border-bottom: 0;
   backdrop-filter: none;
-  transition: background 180ms ease, min-height 180ms ease;
+  transition: background 180ms ease, box-shadow 180ms ease, color 180ms ease, min-height 180ms ease;
 }
 
 .site-header.is-scrolled {
   min-height: 70px;
-  background: rgba(16, 16, 16, 0.94);
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(18px);
 }
 
@@ -81,6 +83,7 @@ button {
 }
 
 .brand {
+  position: relative;
   gap: 12px;
   font-weight: 900;
   letter-spacing: 0;
@@ -91,6 +94,21 @@ button {
   width: 160px;
   height: auto;
   display: block;
+  transition: opacity 180ms ease;
+}
+
+.brand .logo-red {
+  position: absolute;
+  inset: 0 auto auto 0;
+  opacity: 0;
+}
+
+.site-header.is-scrolled .brand .logo-white {
+  opacity: 0;
+}
+
+.site-header.is-scrolled .brand .logo-red {
+  opacity: 1;
 }
 
 .site-nav {
@@ -108,12 +126,27 @@ button {
   opacity: 1;
 }
 
+.site-header.is-scrolled .site-nav a {
+  color: var(--ink);
+  opacity: 0.88;
+}
+
+.site-header.is-scrolled .site-nav a:hover {
+  color: var(--coral);
+}
+
 .nav-cta {
   padding: 14px 22px;
   color: var(--coral);
   background: #fff;
   border: 1px solid #fff;
   border-radius: 6px;
+}
+
+.site-header.is-scrolled .nav-cta {
+  color: #fff;
+  background: var(--coral);
+  border-color: var(--coral);
 }
 
 .lang-switch {
@@ -126,6 +159,21 @@ button {
   border: 1px solid rgba(255, 255, 255, 0.42);
   border-radius: 6px;
   cursor: pointer;
+}
+
+.site-header.is-scrolled .lang-switch {
+  color: var(--ink);
+  background: #fff;
+  border-color: rgba(17, 17, 17, 0.18);
+}
+
+.site-header.is-scrolled .lang-switch span {
+  color: rgba(17, 17, 17, 0.55);
+}
+
+.site-header.is-scrolled .lang-switch span.is-active {
+  color: #fff;
+  background: var(--coral);
 }
 
 .lang-switch span {
@@ -154,6 +202,11 @@ button {
   color: #fff;
 }
 
+.site-header.is-scrolled .nav-toggle {
+  color: var(--ink);
+  border-color: rgba(17, 17, 17, 0.22);
+}
+
 .nav-toggle span {
   display: block;
   width: 18px;
@@ -164,7 +217,9 @@ button {
 
 .section-dark {
   color: #fff;
-  background: var(--dark);
+  background:
+    linear-gradient(135deg, rgba(244, 55, 61, 0.2) 0 18%, transparent 18% 100%),
+    linear-gradient(115deg, #0c0c0c 0%, #151010 58%, #3a1114 100%);
 }
 
 .section-light {
@@ -470,7 +525,9 @@ section:not(.hero):not(.stats-band) {
 
 .service-strip {
   padding: 0 !important;
-  background: var(--dark);
+  background:
+    linear-gradient(135deg, rgba(244, 55, 61, 0.28) 0 16%, transparent 16% 100%),
+    linear-gradient(115deg, #090909 0%, #121010 60%, #381115 100%);
 }
 
 .service-strip-grid {
@@ -553,7 +610,7 @@ section:not(.hero):not(.stats-band) {
   color: #fff;
   background:
     linear-gradient(135deg, rgba(244, 55, 61, 0.18) 0 18%, transparent 18% 100%),
-    var(--dark);
+    linear-gradient(115deg, #0a0a0a 0%, #131111 56%, #3a1115 100%);
 }
 
 .outcome-section::before {
@@ -725,6 +782,9 @@ section:not(.hero):not(.stats-band) {
 .method-section {
   position: relative;
   overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(244, 55, 61, 0.2) 0 15%, transparent 15% 100%),
+    linear-gradient(115deg, #0b0b0b 0%, #141111 58%, #3b1115 100%);
 }
 
 .method-section::before {
@@ -834,7 +894,9 @@ section:not(.hero):not(.stats-band) {
   width: min(100%, 390px);
   padding: 42px;
   border: 1px solid var(--line);
-  background: var(--dark);
+  background:
+    linear-gradient(135deg, rgba(244, 55, 61, 0.28) 0 22%, transparent 22% 100%),
+    linear-gradient(135deg, #0d0d0d, #391014);
   color: #fff;
 }
 
@@ -944,8 +1006,8 @@ section:not(.hero):not(.stats-band) {
 .cta-section {
   padding: 96px 0 !important;
   background:
-    linear-gradient(135deg, rgba(244, 55, 61, 0.22) 0 18%, transparent 18% 100%),
-    var(--dark);
+    linear-gradient(135deg, rgba(244, 55, 61, 0.35) 0 18%, transparent 18% 100%),
+    linear-gradient(115deg, #0b0b0b 0%, #171010 58%, #411116 100%);
 }
 
 .cta-layout {
@@ -961,7 +1023,9 @@ section:not(.hero):not(.stats-band) {
 .site-footer {
   padding: 42px 0;
   color: rgba(255, 255, 255, 0.7);
-  background: #070707;
+  background:
+    linear-gradient(135deg, rgba(244, 55, 61, 0.28) 0 11%, transparent 11% 100%),
+    linear-gradient(115deg, #070707 0%, #111010 60%, #351014 100%);
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
@@ -978,12 +1042,13 @@ section:not(.hero):not(.stats-band) {
 }
 
 .site-footer address {
-  max-width: 360px;
+  max-width: none;
   margin: 0;
   color: rgba(255, 255, 255, 0.78);
   font-style: normal;
   line-height: 1.5;
   text-align: right;
+  white-space: nowrap;
 }
 
 .reveal {
@@ -1023,6 +1088,12 @@ section:not(.hero):not(.stats-band) {
     padding: 14px;
     background: rgba(13, 16, 22, 0.98);
     border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  .site-header.is-scrolled .site-nav {
+    background: rgba(255, 255, 255, 0.98);
+    border-color: rgba(17, 17, 17, 0.12);
+    box-shadow: 0 18px 42px rgba(0, 0, 0, 0.1);
   }
 
   .site-nav.is-open {
@@ -1273,5 +1344,6 @@ section:not(.hero):not(.stats-band) {
 
   .site-footer address {
     text-align: left;
+    white-space: normal;
   }
 }

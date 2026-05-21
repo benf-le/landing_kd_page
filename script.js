@@ -153,7 +153,11 @@ const translations = {
   "Ready for validation": { vi: "Sẵn sàng kiểm chứng", en: "Ready for validation" },
   "Biến idea thành MVP có thể demo trong 14 ngày.": { vi: "Biến ý tưởng thành MVP có thể demo trong 14 ngày.", en: "Turn your idea into a demo-ready MVP in 14 days." },
   "Đặt lịch tư vấn": { vi: "Đặt lịch tư vấn", en: "Book a consultation" },
-  "Vibe Code MVP Sprint": { vi: "Vibe Code MVP Sprint", en: "Vibe Code MVP Sprint" }
+  "Vibe Code MVP Sprint": { vi: "Vibe Code MVP Sprint", en: "Vibe Code MVP Sprint" },
+  "433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang": {
+    vi: "433 - 435 Nguyễn Hữu Thọ, Cẩm Lệ, Đà Nẵng",
+    en: "433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang"
+  }
 };
 
 const pageMeta = {
