@@ -10,167 +10,277 @@ const heroTitleDuration = document.querySelector("[data-hero-title-duration]");
 
 const heroTitle = {
   vi: {
-    prefix: "Từ ý tưởng đến MVP trong",
-    duration: "2 tuần"
+    prefix: "Biến ý tưởng thành MVP chạy thực tế sau đúng",
+    duration: "14 ngày"
   },
   en: {
-    prefix: "Idea to MVP in",
-    duration: "2 weeks"
+    prefix: "Turn your idea into a live running MVP in exactly",
+    duration: "14 days"
   }
 };
 
 const translations = {
+  // Navigation & General
   "Outcome": { vi: "Kết quả", en: "Outcome" },
-  "Scope": { vi: "Phạm vi", en: "Scope" },
-  "Timeline": { vi: "Lộ trình", en: "Timeline" },
+  "Pain points": { vi: "Nỗi lòng Founder", en: "Pain points" },
+  "Timeline": { vi: "Quy trình", en: "Process" },
   "Pricing": { vi: "Chi phí", en: "Pricing" },
   "Đặt lịch": { vi: "Đặt lịch", en: "Book a call" },
-  "Home / Startup MVP / Vibe Code": { vi: "Trang chủ / MVP Startup / Vibe Code", en: "Home / Startup MVP / Vibe Code" },
-  "For early stage startup founders": { vi: "Dành cho founder startup giai đoạn đầu", en: "For early stage startup founders" },
-  "Idea to MVP in 2 weeks": { vi: "Từ ý tưởng đến MVP trong 2 tuần", en: "Idea to MVP in 2 weeks" },
-  "Gói Vibe Code 2.5K giúp founder biến ý tưởng thành MVP có thể demo, test với user thật và dùng làm nền tảng cho vòng gọi vốn đầu tiên.": {
-    vi: "Gói Vibe Code 2.5K giúp founder biến ý tưởng thành MVP có thể demo, test với người dùng thật và dùng làm nền tảng cho vòng gọi vốn đầu tiên.",
-    en: "The 2.5K Vibe Code package helps founders turn an idea into a demo-ready MVP they can test with real users and use as a foundation for early fundraising."
+
+  // PHẦN 1: HERO SECTION
+  "For early stage startup founders": {
+    vi: "Dành cho founder startup giai đoạn đầu",
+    en: "For early stage startup founders"
   },
-  "Book discovery call": { vi: "Đặt lịch tư vấn", en: "Book discovery call" },
-  "Xem scope": { vi: "Xem phạm vi", en: "View scope" },
-  "Fixed package": { vi: "Gói cố định", en: "Fixed package" },
-  "2 tuần triển khai": { vi: "2 tuần triển khai", en: "2-week delivery" },
-  "14 ngày": { vi: "14 ngày", en: "14 days" },
-  "Từ idea đến MVP demo-ready": { vi: "Từ ý tưởng đến MVP sẵn sàng demo", en: "From idea to demo-ready MVP" },
-  "Chi phí rõ ngay từ đầu": { vi: "Chi phí rõ ngay từ đầu", en: "Clear cost from day one" },
-  "1 sprint": { vi: "1 sprint", en: "1 sprint" },
-  "Scope gọn, ưu tiên outcome": { vi: "Phạm vi gọn, ưu tiên kết quả", en: "Lean scope, outcome first" },
-  "Launch, test, iterate": { vi: "Ra mắt, kiểm chứng, cải tiến", en: "Launch, test, iterate" },
-  "Strategise & Plan": { vi: "Chiến lược & lập kế hoạch", en: "Strategise & Plan" },
-  "Define MVP goals, core users, roadmap": { vi: "Xác định mục tiêu MVP, người dùng chính và lộ trình", en: "Define MVP goals, core users, roadmap" },
-  "Build & Engage": { vi: "Xây dựng & tương tác", en: "Build & Engage" },
-  "Human-centric product flow, rapid engineering": { vi: "Luồng sản phẩm lấy người dùng làm trung tâm, triển khai nhanh", en: "Human-centric product flow, rapid engineering" },
-  "Analyse & Augment": { vi: "Phân tích & tăng cường", en: "Analyse & Augment" },
-  "Launch, track signal, learn from user behavior": { vi: "Ra mắt, đo tín hiệu và học từ hành vi người dùng", en: "Launch, track signal, learn from user behavior" },
-  "Built for founders who need signal fast": { vi: "Dành cho founder cần tín hiệu thị trường thật nhanh", en: "Built for founders who need signal fast" },
-  "SaaS": { vi: "SaaS", en: "SaaS" },
-  "AI Workflow": { vi: "Quy trình AI", en: "AI Workflow" },
-  "Marketplace": { vi: "Sàn giao dịch", en: "Marketplace" },
-  "Internal Tool": { vi: "Công cụ nội bộ", en: "Internal Tool" },
-  "Booking App": { vi: "Ứng dụng đặt lịch", en: "Booking App" },
-  "Outcome first": { vi: "Ưu tiên kết quả", en: "Outcome first" },
-  "Không bán giờ code. Bán một MVP đủ dùng để kiểm chứng.": {
-    vi: "Không bán giờ code. Bán một MVP đủ dùng để kiểm chứng.",
-    en: "We do not sell coding hours. We deliver an MVP built for validation."
+  "Biến ý tưởng thành MVP chạy thực tế sau đúng": {
+    vi: "Biến ý tưởng thành MVP chạy thực tế sau đúng",
+    en: "Turn your idea into a live running MVP in exactly"
   },
-  "Rõ product promise": { vi: "Rõ lời hứa sản phẩm", en: "Clear product promise" },
-  "Chốt user, pain point, luồng chính và tiêu chí demo trước khi build.": {
-    vi: "Chốt người dùng, pain point, luồng chính và tiêu chí demo trước khi build.",
-    en: "Lock the target user, pain point, core flow and demo criteria before build."
+  "14 ngày": {
+    vi: "14 ngày",
+    en: "14 days"
   },
-  "MVP có thể thao tác": { vi: "MVP có thể thao tác", en: "Clickable MVP" },
-  "Không phải mockup tĩnh. Founder có thể click, demo, thu feedback và đo phản ứng thật.": {
-    vi: "Không phải mockup tĩnh. Founder có thể click, demo, thu feedback và đo phản ứng thật.",
-    en: "Not a static mockup. Founders can click, demo, collect feedback and measure real reactions."
+  "Ngừng lãng phí hàng tháng trời và hàng chục nghìn USD cho những tính năng chưa ai cần. Gói Vibe Code $2.5K giúp các Early-stage Founders đóng gói lõi sản phẩm (Core Loop), ra mắt thị trường và thu thập tín hiệu thực từ người dùng ngay lập tức.": {
+    vi: "Ngừng lãng phí hàng tháng trời và hàng chục nghìn USD cho những tính năng chưa ai cần. Gói Vibe Code $2.5K giúp các Early-stage Founders đóng gói lõi sản phẩm (Core Loop), ra mắt thị trường và thu thập tín hiệu thực từ người dùng ngay lập tức.",
+    en: "Stop wasting months and tens of thousands of dollars on features nobody needs. The $2.5K Vibe Code package helps early-stage founders package their product core loop, launch to market, and capture real user feedback immediately."
   },
-  "Nền tảng để iterate": { vi: "Nền tảng để cải tiến", en: "Foundation to iterate" },
-  "Codebase gọn, tài liệu bàn giao rõ, sẵn sàng mở rộng sau khi có tín hiệu từ thị trường.": {
-    vi: "Codebase gọn, tài liệu bàn giao rõ, sẵn sàng mở rộng sau khi có tín hiệu từ thị trường.",
-    en: "A lean codebase, clear handoff notes and a foundation ready to extend after market signal."
+  "Đặt lịch Hack-Sprint ngay →": {
+    vi: "Đặt lịch Hack-Sprint ngay →",
+    en: "Book your Hack-Sprint now →"
   },
-  "Package scope": { vi: "Phạm vi gói", en: "Package scope" },
-  "Gói 2.5K tập trung vào core loop có giá trị nhất": {
-    vi: "Gói 2.5K tập trung vào vòng lặp cốt lõi có giá trị nhất",
-    en: "The 2.5K package focuses on the highest-value core loop"
+  "Validate ý tưởng của bạn miễn phí": {
+    vi: "Validate ý tưởng của bạn miễn phí",
+    en: "Validate your idea for free"
   },
-  "Mỗi MVP được scope theo mục tiêu học nhanh: đủ tốt để bán, chưa phình thành sản phẩm lớn.": {
-    vi: "Mỗi MVP được xác định phạm vi theo mục tiêu học nhanh: đủ tốt để bán, chưa phình thành sản phẩm lớn.",
-    en: "Each MVP is scoped for fast learning: good enough to sell, not bloated into a full product."
+  "Dành riêng cho SaaS, AI Workflow, Marketplace & Web App.": {
+    vi: "Dành riêng cho SaaS, AI Workflow, Marketplace & Web App.",
+    en: "Exclusively for SaaS, AI Workflow, Marketplace & Web App."
   },
-  "Included": { vi: "Bao gồm", en: "Included" },
-  "Product sprint": { vi: "Sprint sản phẩm", en: "Product sprint" },
-  "Clarify idea, target user, MVP success criteria": { vi: "Làm rõ ý tưởng, người dùng mục tiêu, tiêu chí thành công của MVP", en: "Clarify idea, target user, MVP success criteria" },
-  "User journey, feature priority, lean backlog": { vi: "User journey, ưu tiên tính năng, backlog tinh gọn", en: "User journey, feature priority, lean backlog" },
-  "Clickable app flow and deploy-ready MVP": { vi: "Luồng app có thể thao tác và MVP sẵn sàng deploy", en: "Clickable app flow and deploy-ready MVP" },
-  "Build": { vi: "Xây dựng", en: "Build" },
-  "Core functionality": { vi: "Chức năng cốt lõi", en: "Core functionality" },
-  "1 primary user role and 1 main workflow": { vi: "1 vai trò người dùng chính và 1 workflow chính", en: "1 primary user role and 1 main workflow" },
-  "Responsive landing/app interface": { vi: "Giao diện landing/app responsive", en: "Responsive landing/app interface" },
-  "Authentication or form/data capture when needed": { vi: "Đăng nhập hoặc form/thu thập dữ liệu khi cần", en: "Authentication or form/data capture when needed" },
-  "Launch": { vi: "Ra mắt", en: "Launch" },
-  "Handoff assets": { vi: "Tài sản bàn giao", en: "Handoff assets" },
-  "Live deployment link": { vi: "Link deploy thực tế", en: "Live deployment link" },
-  "Basic analytics-ready structure": { vi: "Cấu trúc sẵn sàng gắn analytics cơ bản", en: "Basic analytics-ready structure" },
-  "Readme, next-step roadmap, iteration notes": { vi: "Readme, roadmap bước tiếp theo, ghi chú cải tiến", en: "Readme, next-step roadmap, iteration notes" },
-  "How we work": { vi: "Cách triển khai", en: "How we work" },
-  "AI-assisted build, senior product judgment": { vi: "AI hỗ trợ build, senior product judgment dẫn hướng", en: "AI-assisted build, senior product judgment" },
-  "Vibe coding tăng tốc phần production, nhưng quyết định quan trọng vẫn là scope, flow, trade-off kỹ thuật và khả năng demo được trong 14 ngày.": {
-    vi: "Vibe coding tăng tốc phần production, nhưng quyết định quan trọng vẫn là phạm vi, luồng sản phẩm, trade-off kỹ thuật và khả năng demo được trong 14 ngày.",
-    en: "Vibe coding speeds up production, but the important decisions are scope, product flow, technical trade-offs and demo readiness within 14 days."
+
+  // PHẦN 2: THE PAIN POINT
+  "The Pain Point": {
+    vi: "Nỗi lòng Founder",
+    en: "The Pain Point"
   },
-  "Lean Discovery": { vi: "Khám phá tinh gọn", en: "Lean Discovery" },
-  "Chuyển idea rộng thành một use case có thể chứng minh.": { vi: "Chuyển ý tưởng rộng thành một use case có thể chứng minh.", en: "Turn a broad idea into one provable use case." },
-  "Fast Prototype": { vi: "Prototype nhanh", en: "Fast Prototype" },
-  "Dựng UI, data shape và luồng chính bằng nhịp build ngắn.": { vi: "Dựng UI, cấu trúc dữ liệu và luồng chính bằng nhịp build ngắn.", en: "Build UI, data shape and core flow in short production cycles." },
-  "Founder Review": { vi: "Founder review", en: "Founder Review" },
-  "Review liên tục để cắt noise, giữ đúng insight cần test.": { vi: "Review liên tục để cắt nhiễu và giữ đúng insight cần kiểm chứng.", en: "Review continuously to remove noise and keep the insight worth testing." },
-  "Launch Ready": { vi: "Sẵn sàng ra mắt", en: "Launch Ready" },
-  "Deploy, polish demo path và bàn giao hướng iterate tiếp.": { vi: "Deploy, hoàn thiện luồng demo và bàn giao hướng cải tiến tiếp theo.", en: "Deploy, polish the demo path and hand off the next iteration direction." },
-  "Two-week delivery plan": { vi: "Kế hoạch triển khai 2 tuần", en: "Two-week delivery plan" },
-  "Lịch triển khai rõ từng chặng": { vi: "Lịch triển khai rõ từng chặng", en: "A clear delivery plan for every stage" },
-  "Day 1-2": { vi: "Ngày 1-2", en: "Day 1-2" },
-  "Define": { vi: "Định nghĩa", en: "Define" },
-  "Workshop, user story, scope lock, success metric.": { vi: "Workshop, user story, chốt phạm vi, chỉ số thành công.", en: "Workshop, user story, scope lock, success metric." },
-  "Day 3-5": { vi: "Ngày 3-5", en: "Day 3-5" },
-  "Design": { vi: "Thiết kế", en: "Design" },
-  "Information architecture, key screens, interaction flow.": { vi: "Kiến trúc thông tin, màn hình chính, luồng tương tác.", en: "Information architecture, key screens, interaction flow." },
-  "Day 6-11": { vi: "Ngày 6-11", en: "Day 6-11" },
-  "Frontend, core logic, integration, responsive QA.": { vi: "Frontend, logic cốt lõi, tích hợp, QA responsive.", en: "Frontend, core logic, integration, responsive QA." },
-  "Day 12-14": { vi: "Ngày 12-14", en: "Day 12-14" },
-  "Ship": { vi: "Bàn giao", en: "Ship" },
-  "Demo polish, deployment, handoff, next iteration roadmap.": { vi: "Hoàn thiện demo, deploy, bàn giao, roadmap cải tiến tiếp theo.", en: "Demo polish, deployment, handoff, next iteration roadmap." },
-  "Fixed offer": { vi: "Gói cố định", en: "Fixed offer" },
-  "2.5K / 2 tuần cho founder cần MVP thật, không cần team full-time.": {
-    vi: "2.5K / 2 tuần cho founder cần MVP thật, không cần team full-time.",
-    en: "2.5K / 2 weeks for founders who need a real MVP without a full-time team."
+  "Có phải bạn đang kẹt trong \"Vòng xoáy vô tận\" này?": {
+    vi: "Có phải bạn đang kẹt trong \"Vòng xoáy vô tận\" này?",
+    en: "Are you stuck in this \"infinite loop\"?"
   },
-  "Phù hợp khi bạn đang có idea, insight thị trường, hoặc khách hàng đầu tiên nhưng cần một sản phẩm gọn để demo và học nhanh.": {
-    vi: "Phù hợp khi bạn đang có ý tưởng, insight thị trường hoặc khách hàng đầu tiên nhưng cần một sản phẩm gọn để demo và học nhanh.",
-    en: "Best when you have an idea, market insight or first customers, and need a lean product to demo and learn fast."
+  "Sợ mất lợi thế": {
+    vi: "Sợ mất lợi thế",
+    en: "Fear of losing edge"
   },
-  "Gói Vibe Code": { vi: "Gói Vibe Code", en: "Vibe Code Package" },
-  "14 ngày làm việc theo sprint": { vi: "14 ngày làm việc theo sprint", en: "14 days delivered as a sprint" },
-  "Start MVP sprint": { vi: "Bắt đầu sprint MVP", en: "Start MVP sprint" },
-  "Founder fit": { vi: "Phù hợp với founder nào", en: "Founder fit" },
-  "Khi nào nên chọn gói này?": { vi: "Khi nào nên chọn gói này?", en: "When should you choose this package?" },
-  "Good fit": { vi: "Phù hợp", en: "Good fit" },
-  "Bạn cần demo trong 2 tuần để gặp user, đối tác hoặc investor.": { vi: "Bạn cần demo trong 2 tuần để gặp người dùng, đối tác hoặc nhà đầu tư.", en: "You need a demo in 2 weeks for users, partners or investors." },
-  "Bạn chấp nhận scope nhỏ để học nhanh và iterate sau.": { vi: "Bạn chấp nhận phạm vi nhỏ để học nhanh và cải tiến sau.", en: "You accept a small scope to learn fast and iterate later." },
-  "Bạn cần một app đủ thật để validate willingness-to-pay.": { vi: "Bạn cần một app đủ thật để kiểm chứng willingness-to-pay.", en: "You need a real-enough app to validate willingness-to-pay." },
-  "Not a fit": { vi: "Chưa phù hợp", en: "Not a fit" },
-  "Bạn muốn build full product nhiều role, nhiều module ngay từ đầu.": { vi: "Bạn muốn build full product nhiều role, nhiều module ngay từ đầu.", en: "You want a full product with many roles and modules from day one." },
-  "Bạn chưa rõ user, pain point, hoặc chưa sẵn sàng cắt bớt feature.": { vi: "Bạn chưa rõ người dùng, pain point hoặc chưa sẵn sàng cắt bớt tính năng.", en: "You are not clear on the user, pain point, or are not ready to cut features." },
-  "Bạn cần hệ thống enterprise-grade, audit, compliance phức tạp.": { vi: "Bạn cần hệ thống enterprise-grade, audit hoặc compliance phức tạp.", en: "You need an enterprise-grade system with complex audit or compliance needs." },
-  "FAQ": { vi: "FAQ", en: "FAQ" },
-  "Các câu hỏi founder thường hỏi trước khi bắt đầu": { vi: "Các câu hỏi founder thường hỏi trước khi bắt đầu", en: "Questions founders usually ask before starting" },
-  "MVP gồm những công nghệ nào?": { vi: "MVP gồm những công nghệ nào?", en: "What technologies are included in the MVP?" },
-  "Stack được chọn theo mục tiêu build nhanh, deploy ổn và dễ bàn giao. Thông thường gồm frontend responsive, backend/API nhẹ hoặc BaaS khi phù hợp.": {
-    vi: "Stack được chọn theo mục tiêu build nhanh, deploy ổn và dễ bàn giao. Thông thường gồm frontend responsive, backend/API nhẹ hoặc BaaS khi phù hợp.",
-    en: "The stack is chosen for fast build, stable deployment and easy handoff. It usually includes a responsive frontend, a lightweight backend/API or BaaS when suitable."
+  "Ý tưởng rất hay nhưng sợ đối thủ làm trước vì đội tech của bạn quá chậm.": {
+    vi: "Ý tưởng rất hay nhưng sợ đối thủ làm trước vì đội tech của bạn quá chậm.",
+    en: "Great idea, but afraid competitors will launch first because your tech team is too slow."
   },
-  "Có bao gồm branding và landing page không?": { vi: "Có bao gồm branding và landing page không?", en: "Does it include branding and a landing page?" },
-  "Có thể bao gồm landing page hoặc app interface cơ bản nếu đó là phần thiết yếu để demo và thu lead trong MVP scope.": {
-    vi: "Có thể bao gồm landing page hoặc app interface cơ bản nếu đó là phần thiết yếu để demo và thu lead trong phạm vi MVP.",
-    en: "It can include a landing page or basic app interface when that is essential for demoing and collecting leads within the MVP scope."
+  "Sợ cạn vốn": {
+    vi: "Sợ cạn vốn",
+    en: "Fear of running out of capital"
   },
-  "Sau 2 tuần có tiếp tục phát triển được không?": { vi: "Sau 2 tuần có tiếp tục phát triển được không?", en: "Can development continue after 2 weeks?" },
-  "Có. Handoff gồm code, ghi chú kỹ thuật và roadmap ưu tiên để tiếp tục iterate theo feedback thật.": {
-    vi: "Có. Bàn giao gồm code, ghi chú kỹ thuật và roadmap ưu tiên để tiếp tục cải tiến theo feedback thật.",
-    en: "Yes. Handoff includes code, technical notes and a prioritized roadmap to keep iterating from real feedback."
+  "Muốn thuê Dev xịn nhưng quỹ vận hành ban đầu không cho phép nuôi team full-time.": {
+    vi: "Muốn thuê Dev xịn nhưng quỹ vận hành ban đầu không cho phép nuôi team full-time.",
+    en: "Want high-quality developers but early operating budget doesn't allow hiring a full-time team."
   },
-  "Ready for validation": { vi: "Sẵn sàng kiểm chứng", en: "Ready for validation" },
-  "Biến idea thành MVP có thể demo trong 14 ngày.": { vi: "Biến ý tưởng thành MVP có thể demo trong 14 ngày.", en: "Turn your idea into a demo-ready MVP in 14 days." },
-  "Đặt lịch tư vấn": { vi: "Đặt lịch tư vấn", en: "Book a consultation" },
-  "Vibe Code MVP Sprint": { vi: "Vibe Code MVP Sprint", en: "Vibe Code MVP Sprint" },
-  "433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang": {
-    vi: "433 - 435 Nguyễn Hữu Thọ, Cẩm Lệ, Đà Nẵng",
-    en: "433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang"
+  "Sợ \"Over-engineering\"": {
+    vi: "Sợ \"Over-engineering\"",
+    en: "Fear of \"Over-engineering\""
+  },
+  "Vẽ ra quá nhiều tính năng (Feature Creep) nhưng thực tế User chỉ dùng đúng 1 tính năng cốt lõi.": {
+    vi: "Vẽ ra quá nhiều tính năng (Feature Creep) nhưng thực tế User chỉ dùng đúng 1 tính năng cốt lõi.",
+    en: "Drawing up too many features (Feature Creep), but in reality, users only use one core feature."
+  },
+
+  // PHẦN 3: THE SOLUTION & OUTCOME
+  "The Solution & Outcome": {
+    vi: "Giải pháp & Kết quả",
+    en: "The Solution & Outcome"
+  },
+  "Chúng tôi không bán giờ code. Chúng tôi ship Tín hiệu thị trường (Market Signal).": {
+    vi: "Chúng tôi không bán giờ code. Chúng tôi ship Tín hiệu thị trường (Market Signal).",
+    en: "We do not sell coding hours. We ship Market Signals."
+  },
+  "MVP Click-and-Run (Chạy thực tế)": {
+    vi: "MVP Click-and-Run (Chạy thực tế)",
+    en: "Click-and-Run MVP (Live Running)"
+  },
+  "Không phải bản Figma hay Mockup tĩnh. Đây là sản phẩm hoàn chỉnh, có database, deploy live link để bạn gửi cho Investor hoặc chạy ads thu Lead.": {
+    vi: "Không phải bản Figma hay Mockup tĩnh. Đây là sản phẩm hoàn chỉnh, có database, deploy live link để bạn gửi cho Investor hoặc chạy ads thu Lead.",
+    en: "Not a Figma file or a static mockup. This is a fully functional product with a database and a live deployed link you can send to investors or run lead generation ads."
+  },
+  "1 Core Workflow duy nhất": {
+    vi: "1 Core Workflow duy nhất",
+    en: "1 Single Core Workflow"
+  },
+  "Ép phạm vi (Scope) về mức tinh gọn nhất. Giúp bạn tập trung 100% vào tính năng \"ăn tiền\" nhất của Startup.": {
+    vi: "Ép phạm vi (Scope) về mức tinh gọn nhất. Giúp bạn tập trung 100% vào tính năng \"ăn tiền\" nhất của Startup.",
+    en: "Force the scope to its absolute leanest. Helping you focus 100% on the most high-value feature of your startup."
+  },
+  "Sẵn sàng để mở rộng (Scalable Codebase)": {
+    vi: "Sẵn sàng để mở rộng (Scalable Codebase)",
+    en: "Scalable Codebase (Ready to Expand)"
+  },
+  "Code sạch, tài liệu bàn giao rõ ràng, bàn giao 100% Github. Khi có vốn, bạn có thể tự phát triển tiếp mà không phải đập đi xây lại.": {
+    vi: "Code sạch, tài liệu bàn giao rõ ràng, bàn giao 100% Github. Khi có vốn, bạn có thể tự phát triển tiếp mà không phải đập đi xây lại.",
+    en: "Clean code, well-documented, 100% GitHub handoff. When you secure funding, you can scale it yourself without rebuilding from scratch."
+  },
+
+  // PHẦN 4: PROCESS (14 ngày đếm ngược)
+  "Our Process": {
+    vi: "Quy trình của chúng tôi",
+    en: "Our Process"
+  },
+  "14 ngày biến ý tưởng trên giấy thành Sản phẩm chạy mượt mà": {
+    vi: "14 ngày biến ý tưởng trên giấy thành Sản phẩm chạy mượt mà",
+    en: "14 days to turn a paper idea into a smoothly running product"
+  },
+  "Scope Lock": {
+    vi: "Scope Lock",
+    en: "Scope Lock"
+  },
+  "Lean UI/UX": {
+    vi: "Lean UI/UX",
+    en: "Lean UI/UX"
+  },
+  "AI-Assisted Engineering": {
+    vi: "AI-Assisted Engineering",
+    en: "AI-Assisted Engineering"
+  },
+  "Ship & Handoff": {
+    vi: "Bàn giao & Nghiệm thu",
+    en: "Ship & Handoff"
+  },
+  "Workshop cắt bỏ \"Noise\" (tính năng thừa), chốt luồng đi chính của User.": {
+    vi: "Workshop cắt bỏ \"Noise\" (tính năng thừa), chốt luồng đi chính của User.",
+    en: "Workshop to eliminate \"Noise\" (unnecessary features) and lock the user's primary flow."
+  },
+  "Thiết kế giao diện app tập trung vào trải nghiệm cốt lõi.": {
+    vi: "Thiết kế giao diện app tập trung vào trải nghiệm cốt lõi.",
+    en: "Design the app interface focusing on the core experience."
+  },
+  "Đội ngũ Senior kết hợp sức mạnh AI để code, test và hoàn thiện logic với tốc độ tên lửa.": {
+    vi: "Đội ngũ Senior kết hợp sức mạnh AI để code, test và hoàn thiện logic với tốc độ tên lửa.",
+    en: "Senior team combines the power of AI to write code, test, and complete logic at rocket speed."
+  },
+  "Deploy sản phẩm, tích hợp Analytics cơ bản và bàn giao toàn bộ tài sản.": {
+    vi: "Deploy sản phẩm, tích hợp Analytics cơ bản và bàn giao toàn bộ tài sản.",
+    en: "Deploy the product, integrate basic analytics, and hand over all assets."
+  },
+
+  // PHẦN 5: CHÂN DUNG "FOUNDER FIT"
+  "Founder Fit": {
+    vi: "Founder Fit",
+    en: "Founder Fit"
+  },
+  "Gói dịch vụ này có dành cho bạn?": {
+    vi: "Gói dịch vụ này có dành cho bạn?",
+    en: "Is this service package right for you?"
+  },
+  "Nên chọn chúng tôi": {
+    vi: "Nên chọn chúng tôi",
+    en: "Good Fit (Choose Us)"
+  },
+  "KHÔNG nên chọn": {
+    vi: "KHÔNG nên chọn",
+    en: "Not a Fit (Do Not Choose)"
+  },
+  "Bạn cần sản phẩm thật ĐỂ DEMO gọi vốn hoặc chạy thử nghiệm với tập khách hàng Alpha/Beta.": {
+    vi: "Bạn cần sản phẩm thật ĐỂ DEMO gọi vốn hoặc chạy thử nghiệm với tập khách hàng Alpha/Beta.",
+    en: "You need a real product TO DEMO for fundraising or run tests with Alpha/Beta customer segments."
+  },
+  "Bạn có insight ngành rõ ràng nhưng thiếu cánh tay công nghệ (Tech-wing).": {
+    vi: "Bạn có insight ngành rõ ràng nhưng thiếu cánh tay công nghệ (Tech-wing).",
+    en: "You have clear industry insights but lack a technological tech-wing."
+  },
+  "Bạn muốn thất bại nhanh hoặc thành công nhanh (Fail fast, learn faster).": {
+    vi: "Bạn muốn thất bại nhanh hoặc thành công nhanh (Fail fast, learn faster).",
+    en: "You want to fail fast or succeed fast (Fail fast, learn faster)."
+  },
+  "Bạn muốn xây một hệ thống Enterprise đồ sộ, bảo mật ngân hàng ngay từ phiên bản đầu tiên.": {
+    vi: "Bạn muốn xây một hệ thống Enterprise đồ sộ, bảo mật ngân hàng ngay từ phiên bản đầu tiên.",
+    en: "You want to build a massive enterprise system with bank-grade security right from version one."
+  },
+  "Bạn chưa biết User của mình là ai và muốn làm một cái app \"có tất cả mọi thứ\".": {
+    vi: "Bạn chưa biết User của mình là ai và muốn làm một cái app \"có tất cả mọi thứ\".",
+    en: "You don't know who your users are yet and want to build an app that \"has everything\"."
+  },
+
+  // PHẦN 6: PRICING
+  "Pricing Model": {
+    vi: "Bảng giá",
+    en: "Pricing Model"
+  },
+  "Một mức giá cố định. Không phát sinh chi phí.": {
+    vi: "Một mức giá cố định. Không phát sinh chi phí.",
+    en: "One fixed price. No hidden costs."
+  },
+  "Chúng tôi mang đến giải pháp tối ưu cho Founder giai đoạn đầu, không mập mờ về giá, không kéo dài thời gian. Mọi tính năng được đóng gói vừa vặn trong một Sprint 2 tuần quyết định để kiểm chứng giá trị cốt lõi sản phẩm.": {
+    vi: "Chúng tôi mang đến giải pháp tối ưu cho Founder giai đoạn đầu, không mập mờ về giá, không kéo dài thời gian. Mọi tính năng được đóng gói vừa vặn trong một Sprint 2 tuần quyết định để kiểm chứng giá trị cốt lõi sản phẩm.",
+    en: "We deliver the optimal solution for early-stage founders: transparent pricing, zero delays. Every feature is packed tightly into a decisive 2-week sprint to validate your core product value."
+  },
+  "Gói Vibe Code": {
+    vi: "Gói Vibe Code",
+    en: "Vibe Code Package"
+  },
+  "Trọn gói cho 1 Sprint 2 tuần": {
+    vi: "Trọn gói cho 1 Sprint 2 tuần",
+    en: "All-inclusive for a 2-week sprint"
+  },
+  "1 Primary User Role": {
+    vi: "1 Primary User Role",
+    en: "1 Primary User Role"
+  },
+  "1 Core Workflow": {
+    vi: "1 Core Workflow",
+    en: "1 Core Workflow"
+  },
+  "Live Deployment": {
+    vi: "Live Deployment",
+    en: "Live Deployment"
+  },
+  "Source Code Handoff": {
+    vi: "Source Code Handoff",
+    en: "Source Code Handoff"
+  },
+  "1-week Support sau bàn giao": {
+    vi: "1-week Support sau bàn giao",
+    en: "1-week post-handoff support"
+  },
+  "Bắt đầu Sprint của bạn ngay": {
+    vi: "Bắt đầu Sprint của bạn ngay",
+    en: "Start your Sprint now"
+  },
+
+  // PHẦN 7: FAQ
+  "Các câu hỏi thường gặp": {
+    vi: "Các câu hỏi thường gặp",
+    en: "Frequently Asked Questions"
+  },
+  "2 tuần có ngắn quá để làm một sản phẩm chất lượng không?": {
+    vi: "2 tuần có ngắn quá để làm một sản phẩm chất lượng không?",
+    en: "Is 2 weeks too short to build a quality product?"
+  },
+  "Ngắn nếu làm bừa, nhưng đủ nếu áp dụng AI-assisted build phối hợp với sự định hướng của Senior Product Manager. Chúng tôi không cắt giảm chất lượng, chúng tôi cắt giảm những tính năng chưa cần thiết.": {
+    vi: "Ngắn nếu làm bừa, nhưng đủ nếu áp dụng AI-assisted build phối hợp với sự định hướng của Senior Product Manager. Chúng tôi không cắt giảm chất lượng, chúng tôi cắt giảm những tính năng chưa cần thiết.",
+    en: "Too short if done poorly, but sufficient when applying AI-assisted builds coordinated with Senior Product Manager guidance. We do not compromise on quality; we trim unnecessary features."
+  },
+  "Tôi có bị phụ thuộc vào bên bạn sau khi bàn giao không?": {
+    vi: "Tôi có bị phụ thuộc vào bên bạn sau khi bàn giao không?",
+    en: "Will I be dependent on you after handoff?"
+  },
+  "Hoàn toàn không. Chúng tôi bàn giao 100% mã nguồn và tài liệu. Bạn toàn quyền sở hữu sản phẩm của mình.": {
+    vi: "Hoàn toàn không. Chúng tôi bàn giao 100% mã nguồn và tài liệu. Bạn toàn quyền sở hữu sản phẩm của mình.",
+    en: "Absolutely not. We hand over 100% of the source code and documentation. You gain full ownership of your product."
+  },
+
+  // CONTACT & OTHER
+  "Biến ý tưởng thành MVP chạy thực tế sau đúng 14 ngày.": {
+    vi: "Biến ý tưởng thành MVP chạy thực tế sau đúng 14 ngày.",
+    en: "Turn your idea into a live running MVP in exactly 14 days."
+  },
+  "Đặt lịch Hack-Sprint ngay →": {
+    vi: "Đặt lịch Hack-Sprint ngay →",
+    en: "Book your Hack-Sprint now →"
   }
 };
 
@@ -192,6 +302,10 @@ Object.assign(translations, {
     en: "VET Building - 98 Hoang Quoc Viet Street, Nghia Do Ward, Hanoi City"
   },
   "Da Nang": { vi: "Đà Nẵng", en: "Da Nang" },
+  "433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang": {
+    vi: "433 - 435 Nguyễn Hữu Thọ, Cẩm Lệ, Đà Nẵng",
+    en: "433 - 435 Nguyen Huu Tho, Cam Le Ward, Da Nang"
+  },
   "Singapore": { vi: "Singapore", en: "Singapore" },
   "7 Straits View, Marina One East Tower, #05-01, Singapore 018936": {
     vi: "7 Straits View, Marina One East Tower, #05-01, Singapore 018936",
@@ -258,13 +372,13 @@ Object.assign(translations, {
 const pageMeta = {
   vi: {
     lang: "vi",
-    title: "Kyanon Digital - Making Digital Impact That Matters",
-    description: "Gói Vibe Code 2.5K trong 2 tuần giúp startup giai đoạn đầu đi từ ý tưởng đến MVP có thể demo, kiểm chứng và gọi vốn."
+    title: "Kyanon Digital - Biến ý tưởng thành MVP chạy thực tế sau 14 ngày",
+    description: "Biến ý tưởng thành MVP chạy thực tế sau đúng 14 ngày. Gói Vibe Code $2.5K giúp early-stage founders đóng gói lõi sản phẩm (Core Loop) và thu thập tín hiệu thực từ người dùng ngay lập tức."
   },
   en: {
     lang: "en",
-    title: "Kyanon Digital - Making Digital Impact That Matters",
-    description: "The 2.5K Vibe Code package helps early-stage startups go from idea to a demo-ready MVP for validation and fundraising."
+    title: "Kyanon Digital - Turn your idea into a live MVP in 14 days",
+    description: "Turn your idea into a live running MVP in exactly 14 days. The $2.5K Vibe Code package helps early-stage founders package their core product loop and get real user feedback immediately."
   }
 };
 
