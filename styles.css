@@ -1457,12 +1457,12 @@ section:not(.hero):not(.stats-band) {
   font-weight: 500;
 }
 
-.hero-social-proof span::before {
+/* .hero-social-proof span::before {
   content: "✓";
   color: #ff6a72;
   font-weight: 700;
   font-size: 16px;
-}
+} */
 
 /* Footer & Other Standard Components */
 .site-footer {
