@@ -66,29 +66,137 @@ const translations = {
     vi: "Có phải bạn đang kẹt trong \"Vòng xoáy vô tận\" này?",
     en: "Are you stuck in this \"infinite loop\"?"
   },
-  "Sợ mất lợi thế": {
-    vi: "Sợ mất lợi thế",
-    en: "Fear of losing edge"
+  "Thực trạng:": {
+    vi: "Thực trạng:",
+    en: "Reality:"
   },
-  "Ý tưởng rất hay nhưng sợ đối thủ làm trước vì đội tech của bạn quá chậm.": {
-    vi: "Ý tưởng rất hay nhưng sợ đối thủ làm trước vì đội tech của bạn quá chậm.",
-    en: "Great idea, but afraid competitors will launch first because your tech team is too slow."
+
+  // Badges
+  "The Speed Anxiety": {
+    vi: "Nỗi lo về Tốc độ",
+    en: "The Speed Anxiety"
   },
-  "Sợ cạn vốn": {
-    vi: "Sợ cạn vốn",
-    en: "Fear of running out of capital"
+  "The Cash Burn Trap": {
+    vi: "Bẫy Đốt tiền",
+    en: "The Cash Burn Trap"
   },
-  "Muốn thuê Dev xịn nhưng quỹ vận hành ban đầu không cho phép nuôi team full-time.": {
-    vi: "Muốn thuê Dev xịn nhưng quỹ vận hành ban đầu không cho phép nuôi team full-time.",
-    en: "Want high-quality developers but early operating budget doesn't allow hiring a full-time team."
+  "The Pitching Dilemma": {
+    vi: "Bàn tay trắng gặp Nhà đầu tư",
+    en: "The Pitching Dilemma"
   },
-  "Sợ \"Over-engineering\"": {
-    vi: "Sợ \"Over-engineering\"",
-    en: "Fear of \"Over-engineering\""
+  "The Non-Tech Founder Wall": {
+    vi: "Rào cản Công nghệ",
+    en: "The Non-Tech Founder Wall"
   },
-  "Vẽ ra quá nhiều tính năng (Feature Creep) nhưng thực tế User chỉ dùng đúng 1 tính năng cốt lõi.": {
-    vi: "Vẽ ra quá nhiều tính năng (Feature Creep) nhưng thực tế User chỉ dùng đúng 1 tính năng cốt lõi.",
-    en: "Drawing up too many features (Feature Creep), but in reality, users only use one core feature."
+  "The Build-Something-Nobody-Wants Nightmare": {
+    vi: "Ác mộng xây app không ai dùng",
+    en: "The Build-Something-Nobody-Wants Nightmare"
+  },
+
+  // Pain Point 1
+  "1. Nỗi đau về Tốc độ: \"Sợ mất cửa sổ cơ hội\"": {
+    vi: "1. Nỗi đau về Tốc độ: \"Sợ mất cửa sổ cơ hội\"",
+    en: "1. Speed Anxiety: \"Fear of missing the window of opportunity\""
+  },
+  "Ý tưởng công nghệ (nhất là về AI, SaaS) thay đổi theo từng tuần. Founder nhìn thấy một khoảng trống thị trường rất ngon, nhưng họ không có sản phẩm để \"cắm cờ\" giữ chỗ.": {
+    vi: "Ý tưởng công nghệ (nhất là về AI, SaaS) thay đổi theo từng tuần. Founder nhìn thấy một khoảng trống thị trường rất ngon, nhưng họ không có sản phẩm để \"cắm cờ\" giữ chỗ.",
+    en: "Tech ideas (especially AI and SaaS) change weekly. Founders spot a golden market gap but lack a product to \"plant their flag\" and secure the spot."
+  },
+  "Sợ đối thủ ra mắt trước và chiếm mất thị trường (FOMO nặng nề).": {
+    vi: "Sợ đối thủ ra mắt trước và chiếm mất thị trường (FOMO nặng nề).",
+    en: "Fear of competitors launching first and capturing the market (severe FOMO)."
+  },
+  "Bị kẹt trong \"vòng lặp thảo luận\": Họ mất 2-3 tháng chỉ để họp hành, cãi nhau về tính năng trên giấy mà chưa có gì chạy thử.": {
+    vi: "Bị kẹt trong \"vòng lặp thảo luận\": Họ mất 2-3 tháng chỉ để họp hành, cãi nhau về tính năng trên giấy mà chưa có gì chạy thử.",
+    en: "Stuck in the \"discussion loop\": Wasting 2-3 months on meetings and debating features on paper without a testable prototype."
+  },
+  "Mất đà tâm lý (Momentum): Sự hào hứng ban đầu của Founder và Co-founder bị mài mòn theo thời gian vì mãi không thấy sản phẩm thành hình.": {
+    vi: "Mất đà tâm lý (Momentum): Sự hào hứng ban đầu của Founder và Co-founder bị mài mòn theo thời gian vì mãi không thấy sản phẩm thành hình.",
+    en: "Loss of momentum: The initial excitement of founders and co-founders fades over time as the product fails to take shape."
+  },
+
+  // Pain Point 2
+  "2. Nỗi đau về Chi phí & Nguồn lực: \"Cái bẫy đốt tiền\"": {
+    vi: "2. Nỗi đau về Chi phí & Nguồn lực: \"Cái bẫy đốt tiền\"",
+    en: "2. Cash Burn Trap: \"The cost and resource trap\""
+  },
+  "Founder thường nghĩ muốn làm app thì phải tuyển CTO xịn, thuê 2-3 Dev, 1 Designer. Chi phí vận hành (Burn rate) lên tới 50M - 100M+/tháng trong khi chưa kiếm được đồng nào.": {
+    vi: "Founder thường nghĩ muốn làm app thì phải tuyển CTO xịn, thuê 2-3 Dev, 1 Designer. Chi phí vận hành (Burn rate) lên tới 50M - 100M+/tháng trong khi chưa kiếm được đồng nào.",
+    en: "Founders often think building an app requires hiring a top CTO, 2-3 developers, and a designer, pushing the burn rate to 50M - 100M+ VND/month before generating any revenue."
+  },
+  "Sợ tuyển sai người: Tuyển Dev không hợp, mất 2 tháng thử việc, tốn tiền lương nhưng sản phẩm nhận lại là một đống code rác không chạy được.": {
+    vi: "Sợ tuyển sai người: Tuyển Dev không hợp, mất 2 tháng thử việc, tốn tiền lương nhưng sản phẩm nhận lại là một đống code rác không chạy được.",
+    en: "Fear of hiring the wrong people: Hiring incompatible developers, losing 2 months of probation, wasting salary, only to receive buggy code that doesn't run."
+  },
+  "Chi phí cơ hội quá lớn: Đốt sạch số tiền tiết kiệm hoặc tiền của người thân (Friends & Family) ngay từ \"vòng gửi xe\" chỉ để xây một cái app mà chưa biết có ai dùng không.": {
+    vi: "Chi phí cơ hội quá lớn: Đốt sạch số tiền tiết kiệm hoặc tiền của người thân (Friends & Family) ngay từ \"vòng gửi xe\" chỉ để xây một cái app mà chưa biết có ai dùng không.",
+    en: "Massive opportunity cost: Burning through personal savings or family funds right at the starting line just to build an app without knowing if anyone will use it."
+  },
+  "Bị các Agency truyền thống \"vẽ\" ra đủ loại chi phí, báo giá hàng trăm triệu và kéo dài 3-6 tháng.": {
+    vi: "Bị các Agency truyền thống \"vẽ\" ra đủ loại chi phí, báo giá hàng trăm triệu và kéo dài 3-6 tháng.",
+    en: "Exploited by traditional agencies that inflate costs, quote hundreds of millions, and drag projects out for 3-6 months."
+  },
+
+  // Pain Point 3
+  "3. Nỗi đau khi đi Gọi vốn: \"Bàn tay trắng gặp Nhà đầu tư\"": {
+    vi: "3. Nỗi đau khi đi Gọi vốn: \"Bàn tay trắng gặp Nhà đầu tư\"",
+    en: "3. Pitching Dilemma: \"Empty-handed before investors\""
+  },
+  "Founder đi gặp các Quỹ (VCs) hoặc Thiên thần (Angel Investors) chỉ với một file Slide (Pitch Deck) bóng bẩy và những lời hứa hẹn.": {
+    vi: "Founder đi gặp các Quỹ (VCs) hoặc Thiên thần (Angel Investors) chỉ với một file Slide (Pitch Deck) bóng bẩy và những lời hứa hẹn.",
+    en: "Founders pitch to VCs or Angel Investors armed with nothing but a polished slide deck and promises."
+  },
+  "Nhà đầu tư thời nay rất thực tế, họ không còn xuống tiền cho \"ý tưởng trên giấy\". Câu hỏi của họ luôn là: \"Sản phẩm đâu? Có số liệu (Traction) chưa?\"": {
+    vi: "Nhà đầu tư thời nay rất thực tế, họ không còn xuống tiền cho \"ý tưởng trên giấy\". Câu hỏi của họ luôn là: \"Sản phẩm đâu? Có số liệu (Traction) chưa?\"",
+    en: "Modern investors are highly pragmatic; they no longer fund \"paper ideas.\" Their question is always: \"Where is the product? What's your traction?\""
+  },
+  "Founder cảm thấy tự ti, vị thế thương lượng thấp vì không có gì để chứng minh năng lực thực thi (Execution Capability).": {
+    vi: "Founder cảm thấy tự ti, vị thế thương lượng thấp vì không có gì để chứng minh năng lực thực thi (Execution Capability).",
+    en: "Founders feel insecure with weak bargaining power because they have nothing to prove their execution capability."
+  },
+
+  // Pain Point 4
+  "4. Nỗi đau về Kỹ thuật: \"Sự mù mờ công nghệ\"": {
+    vi: "4. Nỗi đau về Kỹ thuật: \"Sự mù mờ công nghệ\"",
+    en: "4. Non-Tech Founder Wall: \"Tech ignorance\""
+  },
+  "Rất nhiều Founder xuất thân từ Dân Kinh doanh (Business), Marketing hoặc Chuyên gia ngành (Domain Expert). Họ cực giỏi về thị trường nhưng không biết một dòng code nào.": {
+    vi: "Rất nhiều Founder xuất thân từ Dân Kinh doanh (Business), Marketing hoặc Chuyên gia ngành (Domain Expert). Họ cực giỏi về thị trường nhưng không biết một dòng code nào.",
+    en: "Many founders come from business, marketing, or domain expertise backgrounds. They know the market inside out but can't write a single line of code."
+  },
+  "Sợ bị Dev \"qua mặt\" hoặc nói giảm nói tránh về tiến độ (Tech-speak).": {
+    vi: "Sợ bị Dev \"qua mặt\" hoặc nói giảm nói tránh về tiến độ (Tech-speak).",
+    en: "Fear of being misled by developers using jargon to downplay delays or hide poor progress."
+  },
+  "Không biết chọn Tech Stack nào (React, Flutter, No-code hay Python?) để sau này dễ mở rộng, sợ chọn sai là phải đập đi xây lại từ đầu.": {
+    vi: "Không biết chọn Tech Stack nào (React, Flutter, No-code hay Python?) để sau này dễ mở rộng, sợ chọn sai là phải đập đi xây lại từ đầu.",
+    en: "Unsure which tech stack to choose (React, Flutter, No-code, or Python?) for future scalability, fearing a wrong choice means starting over."
+  },
+  "Bị quá tải thông tin, không biết thế nào là \"đủ dùng\" cho một MVP, dẫn đến việc đòi làm quá nhiều tính năng (Feature Creep) khiến dự án bị phình to và chết yểu.": {
+    vi: "Bị quá tải thông tin, không biết thế nào là \"đủ dùng\" cho một MVP, dẫn đến việc đòi làm quá nhiều tính năng (Feature Creep) khiến dự án bị phình to và chết yểu.",
+    en: "Overwhelmed by information, not knowing what is \"just enough\" for an MVP, leading to feature creep that inflates the project until it fails."
+  },
+  "Bạn tập trung bán hàng và hiểu User đi, phần Tech để chúng tôi lo. Chúng tôi dịch ý tưởng kinh doanh của bạn thành code sạch, đóng gói gọn gàng và bàn giao 100% quyền sở hữu cho bạn.": {
+    vi: "Bạn tập trung bán hàng và hiểu User đi, phần Tech để chúng tôi lo. Chúng tôi dịch ý tưởng kinh doanh của bạn thành code sạch, đóng gói gọn gàng và bàn giao 100% quyền sở hữu cho bạn.",
+    en: "Focus on sales and understanding your users; let us handle the tech. We translate your business ideas into clean code, package it neatly, and hand over 100% ownership to you."
+  },
+
+  // Pain Point 5
+  "5. Nỗi đau Validate: \"Sợ xây lên một thứ không ai thèm dùng\"": {
+    vi: "5. Nỗi đau Validate: \"Sợ xây lên một thứ không ai thèm dùng\"",
+    en: "5. Build-Something-Nobody-Wants Nightmare: \"Fear of building useless things\""
+  },
+  "Đây là nguyên nhân số 1 khiến Startup thất bại (theo CB Insights). Founder quá yêu sản phẩm của mình, đóng cửa tự xây 6 tháng, ngày ra mắt hí hửng nhưng... không một bóng người tải về.": {
+    vi: "Đây là nguyên nhân số 1 khiến Startup thất bại (theo CB Insights). Founder quá yêu sản phẩm của mình, đóng cửa tự xây 6 tháng, ngày ra mắt hí hửng nhưng... không một bóng người tải về.",
+    en: "This is the #1 reason startups fail (according to CB Insights). Founders fall in love with their product, shut themselves away for 6 months to build it, only to launch to absolute silence."
+  },
+  "Nỗi sợ vô hình về việc mình đang ảo tưởng, đang tự lừa dối bản thân về nhu cầu của thị trường.": {
+    vi: "Nỗi sợ vô hình về việc mình đang ảo tưởng, đang tự lừa dối bản thân về nhu cầu của thị trường.",
+    en: "An invisible fear of being delusional and self-deceived about real market demand."
+  },
+  "Khách hàng tiềm năng bảo: \"Cái này hay đấy, khi nào xong gửi tôi xem\", nhưng khi xong bảo họ trả tiền thì họ từ chối. Founder cần một công cụ để test \"Willingness-to-pay\" (Sự sẵn sàng trả tiền) của khách ngay lập tức.": {
+    vi: "Khách hàng tiềm năng bảo: \"Cái này hay đấy, khi nào xong gửi tôi xem\", nhưng khi xong bảo họ trả tiền thì họ từ chối. Founder cần một công cụ để test \"Willingness-to-pay\" (Sự sẵn sàng trả tiền) của khách ngay lập tức.",
+    en: "Potential customers say, \"This is great, let me know when it's done,\" but refuse to pay when it launches. Founders need a tool to test willingness-to-pay immediately."
   },
 
   // PHẦN 3: THE SOLUTION & OUTCOME

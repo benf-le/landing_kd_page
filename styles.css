@@ -818,7 +818,7 @@ section:not(.hero):not(.stats-band) {
 
 .pain-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 30px;
   margin-top: 50px;
 }
@@ -828,10 +828,16 @@ section:not(.hero):not(.stats-band) {
   border: 1px solid var(--line);
   border-radius: 16px;
   padding: 42px 34px;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.pain-card.full-width {
+  grid-column: span 2;
 }
 
 .pain-card:hover {
@@ -840,16 +846,39 @@ section:not(.hero):not(.stats-band) {
   border-color: rgba(244, 55, 61, 0.35);
 }
 
+/* Custom HSL Gradient hover effect when cards are hovered */
+.pain-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+.pain-card:hover::before {
+  background: linear-gradient(90deg, var(--coral), #ff6a72);
+}
+
+.pain-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26px;
+}
+
 .pain-icon-wrapper {
-  width: 58px;
-  height: 58px;
+  width: 54px;
+  height: 54px;
   border-radius: 12px;
   background: rgba(244, 55, 61, 0.06);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 28px;
   transition: all 0.3s ease;
+  flex-shrink: 0;
 }
 
 .pain-card:hover .pain-icon-wrapper {
@@ -857,7 +886,7 @@ section:not(.hero):not(.stats-band) {
 }
 
 .pain-icon {
-  font-size: 26px;
+  font-size: 24px;
   transition: all 0.3s ease;
 }
 
@@ -865,17 +894,133 @@ section:not(.hero):not(.stats-band) {
   filter: brightness(0) invert(1);
 }
 
-.pain-card h3 {
-  font-size: 22px;
-  color: var(--ink);
-  margin-bottom: 14px;
+.pain-badge {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: rgba(17, 17, 17, 0.04);
+  padding: 6px 14px;
+  border-radius: 20px;
+  letter-spacing: 0.06em;
+  transition: all 0.3s ease;
 }
 
-.pain-card p {
-  font-size: 15px;
+.pain-card:hover .pain-badge {
+  background: var(--coral);
+  color: #ffffff;
+}
+
+.pain-card h3 {
+  font-size: 21px;
+  color: var(--ink);
+  margin-bottom: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.pain-reality {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin-bottom: 22px;
+  padding-bottom: 18px;
+  border-bottom: 1px dashed var(--line);
   line-height: 1.6;
-  color: var(--muted);
+}
+
+.pain-reality strong {
+  color: var(--coral);
+}
+
+/* Custom Warning/Pain List */
+.pain-details {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.pain-details li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.pain-details li::before {
+  content: "⚠";
+  position: absolute;
+  left: 0;
+  top: 1px;
+  color: var(--coral);
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.pain-card:hover .pain-details li {
+  color: var(--ink-soft);
+}
+
+/* Reassurance Callout in Card 4 */
+.pain-solution-callout {
+  margin-top: 24px;
+  padding: 18px 22px;
+  background: rgba(244, 55, 61, 0.03);
+  border-left: 4px solid var(--coral);
+  border-radius: 0 8px 8px 0;
+  transition: all 0.3s ease;
+}
+
+.pain-card:hover .pain-solution-callout {
+  background: rgba(244, 55, 61, 0.06);
+  border-left-color: var(--coral);
+}
+
+.pain-solution-callout p {
+  font-size: 14px;
+  font-weight: 500;
+  font-style: italic;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Split layout inside 5th card */
+.pain-split-container {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 34px;
+}
+
+.pain-split-left .pain-reality {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+@media (max-width: 991px) {
+  .pain-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pain-card.full-width {
+    grid-column: span 1;
+  }
+
+  .pain-split-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pain-split-left .pain-reality {
+    padding-bottom: 18px;
+    border-bottom: 1px dashed var(--line);
+    margin-bottom: 20px;
+  }
 }
 
 /* Redesigned Outcome Section */
